@@ -1,65 +1,50 @@
+# React + TypeScript + Vite
 
-# **Design System**
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Welcome to the Random Design System. This design system is a collection of reusable components, animations, and design principles crafted to help you build consistent, accessible, and visually stunning user interfaces efficiently.  
+Currently, two official plugins are available:
 
----
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## **Features**
+## Expanding the ESLint configuration
 
-- **Reusable Components**: Build UIs faster with ready-to-use components like buttons, hero sections, cards, lists, and more.  
-- **Beautiful Animations**: Enhance user experience with smooth and customizable animations.  
-- **Customizable Design**: Tailor components to match your project’s branding and style.  
-- **Accessibility**: All components are designed with accessibility in mind to ensure inclusivity.  
-- **Scalability**: Designed for both small projects and enterprise-level applications.  
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
+- Configure the top-level `parserOptions` property like this:
 
+```js
+export default tseslint.config({
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
+```
 
-## **Components in Progress**
+- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
+- Optionally add `...tseslint.configs.stylisticTypeChecked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-- **Buttons**: Currently designing a comprehensive button library with support for:  
-  - Primary and secondary styles  
-  - Icon integration  
-  - Disabled states  
-  - Sizes (small, medium, large)  
-  - Accessibility (keyboard and screen reader-friendly)  
+```js
+// eslint.config.js
+import react from 'eslint-plugin-react'
 
-
-
-
-## **Contributors**
- 
-[Oni Oluwatomiwa](https://github.com/26thavenue)  
-
----
-
-## **How to Contribute**
-
-We welcome contributions! If you’d like to add a component, improve animations, or suggest new features:  
-1. Fork the repository.  
-2. Create a branch (`git checkout -b feature/your-feature-name`).  
-3. Commit your changes (`git commit -m "Add a new feature"`).  
-4. Push to the branch (`git push origin feature/your-feature-name`).  
-5. Open a pull request.  
-
----
-
-## **Roadmap**
-
-Here’s what’s next for the design system:  
-- **Finalize Button Components**  
-- **Develop Hero Sections**  
-- **Start Animations Library**  
-- **Add Documentation for All Components**  
-- **Integrate Dark Mode Support**  
-
----
-
-## **License**  
-This design system is licensed under the [MIT License](LICENSE).  
-
----
-
-## **Feedback**  
-We value your feedback! Feel free to open an issue or reach out with ideas or suggestions.  
-
+export default tseslint.config({
+  // Set the react version
+  settings: { react: { version: '18.3' } },
+  plugins: {
+    // Add the react plugin
+    react,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended rules
+    ...react.configs.recommended.rules,
+    ...react.configs['jsx-runtime'].rules,
+  },
+})
+```
