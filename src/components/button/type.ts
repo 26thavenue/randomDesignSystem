@@ -1,13 +1,12 @@
 export interface IButtonProps{
-    name : string
     onClick ?: () => void
     bgColor?: string
     textColor?:string
     loading?:boolean
-    iconLeft:React.ReactNode
-    iconRight:React.ReactNode
+    iconLeft ?:React.ReactNode
+    iconRight ?:React.ReactNode
     type ?: ButtonType
-    variant :ButtonVaraiant
+    variant :ButtonVariant
     size?: ButtonSize
     isActive ?: boolean
     isDisabled ?: boolean
@@ -20,9 +19,9 @@ export interface IButtonProps{
 
 export type IconButton  = Omit<IButtonProps, "iconLeft" | "iconRight">
 
-type ButtonType = "submit" | "reset"
-type ButtonVaraiant = "primary" | "secondary"| "tertiary" | "outline"
-type ButtonSize = "small" | "medium" | "large" |"default"
-type ButtonLoadingStyle = "icon" | "icon-greyed" | "greyed" | "text"
+export type ButtonType = "submit" | "reset"
+export type ButtonVariant = "primary" | "secondary"| "tertiary" | "outline"
+export type ButtonSize = "small" | "medium" | "large" |"default"
+export type ButtonLoadingStyle = "icon" | "icon-greyed" | "greyed" | "text"
 
 
