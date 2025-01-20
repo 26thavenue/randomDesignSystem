@@ -1,43 +1,31 @@
-import { Button ,IconButtons} from "./components"
-import { MdOutlineFileDownload, MdOutlineFilterList} from "react-icons/md";
-import { IoMdNotifications } from "react-icons/io";
+import { Chips } from "./components"
+import { LuListFilter } from "react-icons/lu";
 
 function App() {
 
   return (
-    <div className="px-20 py-40">
-     {/* <p>Random Design Component</p> */}
-     <Button
-      variant ="primary"
-      className="rounded-full shadow-sm"
-      iconLeft={<MdOutlineFileDownload/>}
-     >
-      Download
-    </Button>
+    <div className="px-20 py-40 flex flex-col gap-8">
+      <Chips
+        variants ="outline"
+      >
+        Suggestion
+      </Chips>
+      
+      <Chips
+        variants ="outline"
+        className="rounded-md"
+      >
+        <LuListFilter/>
+        Filter
+        
+      </Chips>
 
-    <Button 
-      variant ="secondary"
-      className="rounded-md my-10  shadow-custom2"
-      iconLeft={<MdOutlineFilterList/>}
-     >
-      Filter
-    </Button>
-
-    <Button 
-      variant ="secondary"
-      className="rounded-md my-10  shadow-custom-outline"
-      // iconLeft={<MdOutlineFilterList/>}
-      loading ={true}
-     >
-      Loading ...
-    </Button>
-
-    <IconButtons
-    className={'rounded-md shadow-custom'} 
-    variant="primary">
-      <IoMdNotifications/>
-    </IconButtons>
-    </div>
+      <Chips
+        variants ="withbg"
+      >
+        Suggestion
+      </Chips>
+    </div>  
   )
 }
 
