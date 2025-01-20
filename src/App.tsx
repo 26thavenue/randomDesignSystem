@@ -8,7 +8,6 @@ function App() {
     <div className="px-20 py-40">
      {/* <p>Random Design Component</p> */}
      <Button
-      bgColor="#000" 
       variant ="primary"
       className="rounded-full shadow-sm"
       iconLeft={<MdOutlineFileDownload/>}
@@ -16,8 +15,7 @@ function App() {
       Download
     </Button>
 
-    <Button
-      bgColor="#000" 
+    <Button 
       variant ="secondary"
       className="rounded-md my-10  shadow-custom2"
       iconLeft={<MdOutlineFilterList/>}
@@ -25,13 +23,13 @@ function App() {
       Filter
     </Button>
 
-    <Button
-      bgColor="#000" 
+    <Button 
       variant ="secondary"
       className="rounded-md my-10  shadow-custom-outline"
       // iconLeft={<MdOutlineFilterList/>}
+      loading ={true}
      >
-      Cancel
+      Loading ...
     </Button>
 
     <IconButtons
