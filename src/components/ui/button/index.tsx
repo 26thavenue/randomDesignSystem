@@ -1,4 +1,4 @@
-import { IButtonProps,ButtonVariant,ButtonSize,ButtonType,ButtonLoadingStyle } from "./type";
+import { IButtonProps,ButtonVariant,ButtonType,ButtonLoadingStyle } from "./type";
 
 
 const index = ({
@@ -10,7 +10,6 @@ const index = ({
     iconRight,
     type,
     variant,
-    size,
     isActive,
     isDisabled,
     id,

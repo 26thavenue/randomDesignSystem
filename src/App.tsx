@@ -1,5 +1,6 @@
-import { Button } from "./components"
+import { Button ,IconButtons} from "./components"
 import { MdOutlineFileDownload, MdOutlineFilterList} from "react-icons/md";
+import { IoMdNotifications } from "react-icons/io";
 
 function App() {
 
@@ -32,6 +33,12 @@ function App() {
      >
       Cancel
     </Button>
+
+    <IconButtons
+    className={'rounded-md shadow-custom'} 
+    variant="primary">
+      <IoMdNotifications/>
+    </IconButtons>
     </div>
   )
 }
