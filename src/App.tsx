@@ -1,4 +1,4 @@
-import { Chips,Badges,Avatar,Divider, Rating,Skeleton } from "./components"
+import { Chips,Badges,Avatar,Divider, Rating,Skeleton, Spinner } from "./components"
 import { FiMail } from "react-icons/fi";
 
 
@@ -42,6 +42,7 @@ function App() {
         number= {6.72}
       />
       <Skeleton/>
+      <Spinner color="purple"/>
     </div>  
   )
 }
