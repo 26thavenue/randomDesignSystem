@@ -1,6 +1,9 @@
-import { Chips,Badges,Avatar,Divider, Rating,Skeleton, Spinner } from "./components"
+import { Chips,Badges,Avatar,Divider, Rating,Skeleton, Spinner ,Tabs} from "./components"
 import { FiMail } from "react-icons/fi";
-
+import { TbProgress } from "react-icons/tb"
+import { FaShippingFast } from "react-icons/fa";
+import { MdSchedule } from "react-icons/md";
+import { TbCancel } from "react-icons/tb";
 
 function App() {
 
@@ -43,6 +46,28 @@ function App() {
       />
       <Skeleton/>
       <Spinner color="purple"/>
+      <Tabs
+        tabs ={[
+          <span className="flex items-center gap-2 ">
+            <TbProgress/>
+            In Progress
+            </span>,
+          <span className="flex items-center gap-2 ">
+            <FaShippingFast/>
+            Shipping Now
+            </span>,
+          <span className="flex items-center gap-2 ">
+            <MdSchedule/>
+            Scheduled
+            </span>,
+          <span className="flex items-center gap-2 ">
+            <TbCancel/>
+            Canceled
+            </span>,
+        ]}
+      />
+
+      
     </div>  
   )
 }

@@ -7,6 +7,7 @@ import Divider from "./ui/dividers"
 import Rating from "./ui/rating"
 import Skeleton from "./ui/skeleton"
 import Spinner from "./ui/spinner"
+import Tabs from "./ui/tabs"
 export {
     Button,
     IconButtons,
@@ -16,5 +17,6 @@ export {
     Divider,
     Rating,
     Skeleton,
-    Spinner
+    Spinner,
+    Tabs
 }
