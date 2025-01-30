@@ -1,4 +1,4 @@
-import { Chips,Badges } from "./components"
+import { Chips,Badges,Avatar } from "./components"
 import { FiMail } from "react-icons/fi";
 
 
@@ -35,6 +35,8 @@ function App() {
         <FiMail size={24}/>
         <Badges number="2"/>
       </div>
+
+      <Avatar type="picture"/>
     </div>  
   )
 }
