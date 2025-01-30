@@ -4,11 +4,13 @@ import Chips from "./ui/chips"
 import Badges from "./ui/badges"
 import Avatar from "./ui/avatar"
 import Divider from "./ui/dividers"
+import Rating from "./ui/rating"
 export {
     Button,
     IconButtons,
     Chips,
     Badges,
     Avatar,
-    Divider
+    Divider,
+    Rating
 }

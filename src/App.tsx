@@ -1,4 +1,4 @@
-import { Chips,Badges,Avatar,Divider } from "./components"
+import { Chips,Badges,Avatar,Divider, Rating } from "./components"
 import { FiMail } from "react-icons/fi";
 
 
@@ -38,6 +38,9 @@ function App() {
 
       <Avatar type="picture"/>
       <Divider/>
+      <Rating 
+        number= {6.72}
+      />
     </div>  
   )
 }
