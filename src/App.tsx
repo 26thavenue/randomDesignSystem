@@ -1,4 +1,4 @@
-import { Chips,Badges,Avatar,Divider, Rating } from "./components"
+import { Chips,Badges,Avatar,Divider, Rating,Skeleton } from "./components"
 import { FiMail } from "react-icons/fi";
 
 
@@ -41,6 +41,7 @@ function App() {
       <Rating 
         number= {6.72}
       />
+      <Skeleton/>
     </div>  
   )
 }

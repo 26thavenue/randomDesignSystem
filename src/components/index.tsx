@@ -5,6 +5,7 @@ import Badges from "./ui/badges"
 import Avatar from "./ui/avatar"
 import Divider from "./ui/dividers"
 import Rating from "./ui/rating"
+import Skeleton from "./ui/skeleton"
 export {
     Button,
     IconButtons,
@@ -12,5 +13,6 @@ export {
     Badges,
     Avatar,
     Divider,
-    Rating
+    Rating,
+    Skeleton
 }
