@@ -1,4 +1,5 @@
-import { Chips } from "./components"
+import { Chips,Badges } from "./components"
+import { FiMail } from "react-icons/fi";
 
 
 function App() {
@@ -27,6 +28,13 @@ function App() {
       >
         Suggestion
       </Chips>
+      
+
+      <div className="relative p-1 max-w-fit">
+        {/* <p className=" px-5 py-3 rounded-full bg-red-600 text-white">A</p> */}
+        <FiMail size={24}/>
+        <Badges number="2"/>
+      </div>
     </div>  
   )
 }
