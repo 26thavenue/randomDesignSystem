@@ -1,4 +1,4 @@
-import { Chips,Badges,Avatar,Divider, Rating,Skeleton, Spinner ,Tabs} from "./components"
+import { Chips,Badges,Avatar,Divider, Rating,Skeleton, Spinner ,Tabs,Tooltips} from "./components"
 import { FiMail } from "react-icons/fi";
 import { TbProgress } from "react-icons/tb"
 import { FaShippingFast } from "react-icons/fa";
@@ -66,6 +66,16 @@ function App() {
             </span>,
         ]}
       />
+
+      <Tooltips 
+      className=""
+      text="Removed">
+        <Chips
+       variants="input"
+      >
+        Suggestion
+      </Chips>
+      </Tooltips>
 
       
     </div>  

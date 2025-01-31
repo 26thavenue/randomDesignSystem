@@ -8,6 +8,7 @@ import Rating from "./ui/rating"
 import Skeleton from "./ui/skeleton"
 import Spinner from "./ui/spinner"
 import Tabs from "./ui/tabs"
+import Tooltips from "./ui/tooltips"
 export {
     Button,
     IconButtons,
@@ -18,5 +19,6 @@ export {
     Rating,
     Skeleton,
     Spinner,
-    Tabs
+    Tabs,
+    Tooltips
 }
