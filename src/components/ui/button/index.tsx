@@ -29,7 +29,7 @@ const index = ({
         id={id}
         onClick={onClick}
         disabled={isDisabled}
-        className={`${variantClass[variant]} ${className} px-[12px] py-[6px] flex gap-2 items-center `}
+        className={`${variantClass[variant]} ${className} px-[16px] py-[8px] flex gap-2 items-center `}
     >
         {loading && 
           <div role="status">
